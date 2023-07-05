@@ -1,0 +1,21 @@
+server:
+  port: 80
+
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/mysql
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: pyg
+    password: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MariaDB103Dialect
+    properties:
+      hibernates:
+        format_sql: true # 이거 있는 곳을 찾아보자.
+    open-in-view: true
