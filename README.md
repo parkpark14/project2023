@@ -35,3 +35,17 @@ html
     </script>
 </body>
 </html>
+
+
+git branch --set-upstream-to=origin/feature/batch fearue/batch
+branch 'feature/batch' set up to track 'origin/feature/batch'.
+
+
+spring boot batch 개발 
+HyperSQL Database
+schema-all.sql 생성
+
+aop로 log4j2 만들것
+
+
+

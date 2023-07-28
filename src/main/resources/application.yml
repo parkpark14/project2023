@@ -4,18 +4,29 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mariadb://localhost:3306/mysql
-    driver-class-name: org.mariadb.jdbc.Driver
-    username: pyg
+    url: jdbc:h2:mem:testdb # jdbc:h2:file:/data/demo
+    driver-class-name: org.h2.Driver
+    username: sa
     password: 1234
 
   jpa:
-    hibernate:
-      ddl-auto: update
-    generate-ddl: true
+    database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
-    database-platform: org.hibernate.dialect.MariaDB103Dialect
-    properties:
-      hibernates:
-        format_sql: true # 이거 있는 곳을 찾아보자.
-    open-in-view: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  
+
+
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   generate-ddl: true
+  #   show-sql: true
+  #   database-platform: org.hibernate.dialect.MariaDB103Dialect
+  #   properties:
+  #     hibernates:
+  #       format_sql: true # 이거 있는 곳을 찾아보자.
+  #   open-in-view: true
