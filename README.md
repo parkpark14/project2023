@@ -47,5 +47,9 @@ schema-all.sql 생성
 
 aop로 log4j2 만들것
 
+spring session 
+
+spring quartz
+spring batch
 
 
